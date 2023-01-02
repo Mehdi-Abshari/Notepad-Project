@@ -22,6 +22,14 @@
   font-family: Poppins-SemiBold;
   src: url("../Fonts/Poppins/PoppinsLatin-SemiBold.ttf");
 }
+@font-face {
+  font-family: Montserrat-Thin;
+  src: url("../Fonts/Montserrat/Montserrat-Thin.ttf");
+}
+@font-face {
+  font-family: Arabic;
+  src: url("../Fonts/NotoSansArabic/NotoSansArabic-VariableFont_wdth\,wght.ttf");
+}
 /* End of Fonts */
 
 /* Start of All Selector */
@@ -87,25 +95,40 @@ input {
 /* End of widget */
 
 /* Start of pro notes */
-.pro-notes {
+.create-notes {
   text-align: center;
-  position: absolute;
-  bottom: 60px;
-  left: -6px;
+  padding-top: 50px;
 }
-.pro-notes p {
-  font-family: Poppins-Light;
-  font-size: 13px;
-  letter-spacing: 0.5px;
-  color: #9b9b9b;
-  width: 200px;
-  margin-left: 56px;
-  margin-bottom: 10px;
+.create-notes form {
+  font-family: Poppins-SemiBold;
+  font-size: 17px;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 30px;
 }
-.pro-notes img {
-  width: 180px;
+form * {
+  margin-top: 10px;
+  background: transparent;
+  outline: none;
+  border: none;
 }
-.pro-notes button {
+input[type="text"] {
+  font-family: Poppins-Reg, Arabic;
+  font-size: 16px;
+}
+.create-notes textarea {
+  font-family: Poppins-Reg, Arabic;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  line-height: 25px;
+  border-radius: 5px;
+  font-size: 17px;
+}
+.create-notes #button {
   font-family: Poppins-Reg;
   font-size: 13px;
   color: #fff;
@@ -115,7 +138,7 @@ input {
   margin-top: 10px;
   transition: background 0.25s;
 }
-.pro-notes button:hover {
+.create-notes #button:hover {
   cursor: pointer;
   background-color: #445b96;
 }
@@ -126,6 +149,7 @@ input {
 .right-card {
   width: 80%;
   height: 100%;
+  position: relative;
 }
 .header-card {
   display: flex;
@@ -140,18 +164,70 @@ input {
 }
 .search-input {
   display: flex;
+  align-items: center;
+  justify-content: end;
   width: 250px;
   height: 50px;
-  border: 1px solid #ccc;
-  position: relative;
+  /* border: 1px solid #ccc; */
+  background-color: #f6f8fa;
+  border-radius: 6px;
 }
 .search-input input {
-  position: absolute;
-  right: 0;
+  font-family: Poppins-Reg;
+  font-size: 14px;
+  background-color: #f6f8fa;
   width: 80%;
 }
 .info {
   display: flex;
   align-items: center;
 }
+.info h6 {
+  font-family: Poppins-Reg;
+  font-size: 13px;
+  color: rgb(46, 46, 46);
+  margin-right: 10px;
+}
+.person-icon {
+  content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0wIDBoMTIwdjEyMEgweiIvPjxwYXRoIGQ9Ik02MCAwYzMzLjEzNyAwIDYwIDI2Ljg2MyA2MCA2MHMtMjYuODYzIDYwLTYwIDYwUzAgOTMuMTM3IDAgNjAgMjYuODYzIDAgNjAgMHptMTcuNSA2NC44MzdjLTYuNDU2IDAtMTEuODIyIDQuNTAyLTEzLjIyMiAxMC41MTYtMy4yNjctMS4zOTctNi4zLTEuMDA5LTguNTU2LS4wMzlDNTQuMjgzIDY5LjMgNDguOTE3IDY0LjgzNyA0Mi41IDY0LjgzN2MtNy41MDYgMC0xMy42MTEgNi4wOTItMTMuNjExIDEzLjU4MkMyOC44ODkgODUuOTA4IDM0Ljk5NCA5MiA0Mi41IDkyYzcuMTU2IDAgMTIuOTUtNS41MSAxMy40OTQtMTIuNDk1IDEuMTY3LS44MTUgNC4yNC0yLjMyOCA4LjAxMi4wNzhDNjQuNjI4IDg2LjUyOSA3MC4zODMgOTIgNzcuNSA5MmM3LjUwNiAwIDEzLjYxMS02LjA5MiAxMy42MTEtMTMuNTgxIDAtNy40OS02LjEwNS0xMy41ODItMTMuNjExLTEzLjU4MnptLTM1IDMuODhjNS4zNjcgMCA5LjcyMiA0LjM0NyA5LjcyMiA5LjcwMiAwIDUuMzU1LTQuMzU1IDkuNy05LjcyMiA5LjctNS4zNjcgMC05LjcyMi00LjM0NS05LjcyMi05LjcgMC01LjM1NSA0LjM1NS05LjcwMSA5LjcyMi05LjcwMXptMzUgMGM1LjM2NyAwIDkuNzIyIDQuMzQ3IDkuNzIyIDkuNzAyIDAgNS4zNTUtNC4zNTUgOS43LTkuNzIyIDkuNy01LjM2NyAwLTkuNzIyLTQuMzQ1LTkuNzIyLTkuNyAwLTUuMzU1IDQuMzU1LTkuNzAxIDkuNzIyLTkuNzAxek05NSA1N0gyNXY0aDcwdi00ek03Mi44NzQgMjkuMzRjLS44LTEuODItMi44NjYtMi43OC00Ljc4NS0yLjE0M0w2MCAyOS45MTRsLTguMTI4LTIuNzE3LS4xOTItLjA1OGMtMS45MjgtLjUzMy0zLjk1NC41MS00LjY2OSAyLjM4N0wzOC4xNDQgNTNoNDMuNzEyTDcyLjk1IDI5LjUyNnoiIGZpbGw9IiNEQURDRTAiLz48L2c+PC9zdmc+");
+  width: 31px;
+}
+
+/* Start of main card */
+.main-card {
+  background-color: #f6f8fa;
+  width: 100%;
+  height: 86%;
+  border-radius: 10px 0 10px 0;
+  position: absolute;
+  bottom: 0;
+}
+.main-card .main-title h4 {
+  font-family: Poppins-Med;
+  font-size: 22px;
+  color: rgb(49, 49, 49);
+  padding: 25px 0 0 35px;
+}
+.note-text {
+  width: max-content;
+  height: max-content;
+  background-color: #d0ecff;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.note-text-par {
+  width: 300px;
+  height: 300px;
+  padding: 0 15px 0 15px;
+}
+.note-text-par h6 {
+  padding-top: 20px;
+}
+.note-text-par h4 {
+  padding-top: 25px;
+}
+.note-text-par p {
+  padding-top: 30px;
+}
+/* End of main card */
 /* End of right card */

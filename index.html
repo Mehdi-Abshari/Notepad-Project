@@ -49,16 +49,17 @@
           </div>
           <!-- End of widget -->
 
-          <!-- Start of pro notes -->
-          <div class="pro-notes">
-            <p>
-              Want to access unlimited notes taking experience & lot's of
-              feature?
-            </p>
-            <img src="Images/upgrade-icon.png" alt="Upgrade-icon" />
-            <button>Upgrade pro</button>
+          <!-- Start of create notes -->
+          <div class="create-notes">
+            <form id="form" action="#">
+              <label for="">Title:</label>
+              <input id="title" type="text" placeholder="Add Your Title ...">
+              <label for="">New Note:</label>
+              <textarea id="note" placeholder="Type Here ..." cols="23" rows="8"></textarea>
+              <input id="button" type="submit"></input>
+          </form>
           </div>
-          <!-- End of pro notes -->
+          <!-- End of create notes -->
         </div>
         <!-- End of left card -->
 
@@ -68,25 +69,37 @@
           <div class="header-card">
             <!-- Start of title -->
             <div class="title">
-              <h4>MY NOTES</h4>
+              <h4>Notepad</h4>
             </div>
             <!-- End of title -->
 
             <!-- Start of search input -->
             <div class="search-input">
-              <input type="search" />
+              <input type="search" placeholder="Search" />
             </div>
             <!-- Start of search input -->
 
             <!-- Start of information -->
             <div class="info">
               <h6>Seyed Mehdi</h6>
-              <img src="" alt="Person" />
+              <div class="person-icon"></div>
               <i></i>
             </div>
             <!-- End of information -->
           </div>
           <!-- End of right header card -->
+
+          <!-- Start of main card -->
+          <div class="main-card">
+            <div class="main-title">
+              <h4>My Notes</h4>
+            </div>
+
+            <!-- Start of note text -->
+            <div id="note-list"></div>
+            <!-- End of note text -->
+          </div>
+          <!-- End of main card -->
         </div>
         <!-- End of right card -->
       </div>
