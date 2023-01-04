@@ -121,12 +121,11 @@ input[type="text"] {
 }
 .create-notes textarea {
   font-family: Poppins-Reg, Arabic;
-  font-size: 16px;
+  font-size: 17px;
   border: 1px solid #ccc;
   padding: 10px;
   line-height: 25px;
   border-radius: 5px;
-  font-size: 17px;
 }
 .create-notes #button {
   font-family: Poppins-Reg;
@@ -208,26 +207,24 @@ input[type="text"] {
   color: rgb(49, 49, 49);
   padding: 25px 0 0 35px;
 }
-.note-text {
-  width: max-content;
-  height: max-content;
-  background-color: #d0ecff;
-  margin-top: 20px;
-  margin-left: 20px;
-}
-.note-text-par {
-  width: 300px;
-  height: 300px;
-  padding: 0 15px 0 15px;
-}
-.note-text-par h6 {
-  padding-top: 20px;
-}
-.note-text-par h4 {
-  padding-top: 25px;
-}
-.note-text-par p {
-  padding-top: 30px;
+#note-list {
+  display: flex;
 }
 /* End of main card */
 /* End of right card */
+
+/* Start of JS Selector Css */
+.removeBtn {
+  font-size: 20px;
+  color: red;
+  cursor: pointer;
+}
+.noteBox {
+  background: #f8c36e;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  margin: 20px;
+  border-radius: 4px;
+}
+/* End of JS Selector Css */
