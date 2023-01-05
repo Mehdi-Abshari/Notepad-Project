@@ -1,112 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="CSS/style.css" />
-    <link rel="icon" href="Images/Notepad-icon.png" />
-    <title>Notepad</title>
-  </head>
-  <body>
-    <!-- Start of main -->
-    <main>
-      <!-- Start of container -->
-      <div class="container">
-        <!-- Start of left card -->
-        <div class="left-card">
-          <!-- Start of mino logo -->
-          <div class="mino-logo">
-            <img src="Images/mino-icon.png" alt="mino-icon" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="icon" href="Images/Notepad-icon.png" />
+  <title>Notepad</title>
+</head>
+
+<body>
+  <!-- Start of main -->
+  <main>
+    <!-- Start of container -->
+    <div class="container">
+      <!-- Start of left card -->
+      <div class="left-card">
+        <!-- Start of mino logo -->
+        <div class="mino-logo">
+          <img src="Images/mino-icon.png" alt="mino-icon" />
+        </div>
+        <!-- End of mino logo -->
+
+        <!-- Start of widget -->
+        <div class="widget">
+          <!-- Start of widget tool -->
+          <div class="widget-item">
+            <a href="#"><span></span>Add new</a>
           </div>
-          <!-- End of mino logo -->
+          <!-- End of widget tool -->
 
-          <!-- Start of widget -->
-          <div class="widget">
-            <!-- Start of widget tool -->
-            <div class="widget-item">
-              <a href="#"><span></span>Add new</a>
-            </div>
-            <!-- End of widget tool -->
-
-            <!-- Start of widget tool -->
-            <div class="widget-item">
-              <a href="#"><span></span>Calander</a>
-            </div>
-            <!-- End of widget tool -->
-
-            <!-- Start of widget tool -->
-            <div class="widget-item">
-              <a href="#"><span></span>Archive</a>
-            </div>
-            <!-- End of widget tool -->
-
-            <!-- Start of widget tool -->
-            <div class="widget-item">
-              <a href="#"><span></span>Trash</a>
-            </div>
-            <!-- End of widget tool -->
+          <!-- Start of widget tool -->
+          <div class="widget-item">
+            <a href="#"><span></span>Calander</a>
           </div>
-          <!-- End of widget -->
+          <!-- End of widget tool -->
 
-          <!-- Start of create notes -->
-          <div class="create-notes">
-            <form id="form" action="#">
-              <label for="#">Title:</label>
-              <input id="title" type="text" placeholder="Add Your Title ...">
-              <label for="#">New Note:</label>
-              <textarea id="note" placeholder="Type Here ..." cols="23" rows="8"></textarea>
-              <input id="button" type="submit"></input>
+          <!-- Start of widget tool -->
+          <div class="widget-item">
+            <a href="#"><span></span>Archive</a>
+          </div>
+          <!-- End of widget tool -->
+
+          <!-- Start of widget tool -->
+          <div class="widget-item">
+            <a href="#"><span></span>Trash</a>
+          </div>
+          <!-- End of widget tool -->
+        </div>
+        <!-- End of widget -->
+
+        <!-- Start of create notes -->
+        <div class="create-notes">
+          <form id="form" action="#">
+            <label for="#">Title:</label>
+            <input id="title" type="text" placeholder="Add Your Title ...">
+            <label for="#">New Note:</label>
+            <textarea id="note" placeholder="Type Here ..." cols="23" rows="8"></textarea>
+            <input id="button" type="submit"></input>
           </form>
-          </div>
-          <!-- End of create notes -->
         </div>
-        <!-- End of left card -->
-
-        <!-- Start of right card -->
-        <div class="right-card">
-          <!-- Start of right header card -->
-          <div class="header-card">
-            <!-- Start of title -->
-            <div class="title">
-              <h4>Notepad</h4>
-            </div>
-            <!-- End of title -->
-
-            <!-- Start of search input -->
-            <div class="search-input">
-              <input type="search" placeholder="Search" />
-            </div>
-            <!-- Start of search input -->
-
-            <!-- Start of information -->
-            <div class="info">
-              <h6>Seyed Mehdi</h6>
-              <div class="person-icon"></div>
-              <i></i>
-            </div>
-            <!-- End of information -->
-          </div>
-          <!-- End of right header card -->
-
-          <!-- Start of main card -->
-          <div class="main-card">
-            <div class="main-title">
-              <h4>My Notes</h4>
-            </div>
-
-            <!-- Start of note list -->
-            <section id="note-list"></section>
-            <!-- End of note list -->
-          </div>
-          <!-- End of main card -->
-        </div>
-        <!-- End of right card -->
+        <!-- End of create notes -->
       </div>
-      <!-- End of container -->
-    </main>
-    <!-- End of main -->
+      <!-- End of left card -->
 
-    <script src="JS/script.js"></script>
-  </body>
+      <!-- Start of right card -->
+      <div class="right-card">
+        <!-- Start of right header card -->
+        <div class="header-card">
+          <!-- Start of title -->
+          <div class="title">
+            <h4>Notepad</h4>
+          </div>
+          <!-- End of title -->
+
+          <!-- Start of search input -->
+          <div class="search-input">
+            <input type="search" placeholder="Search" />
+          </div>
+          <!-- Start of search input -->
+
+          <!-- Start of information -->
+          <div class="info">
+            <h6>Seyed Mehdi</h6>
+            <div class="person-icon"></div>
+            <i></i>
+          </div>
+          <!-- End of information -->
+        </div>
+        <!-- End of right header card -->
+
+        <!-- Start of main card -->
+        <div class="main-card">
+          <div class="main-title">
+            <h4>My Notes</h4>
+          </div>
+
+          <!-- Start of note list -->
+          <section id="note-list"></section>
+          <!-- End of note list -->
+        </div>
+        <!-- End of main card -->
+      </div>
+      <!-- End of right card -->
+    </div>
+    <!-- End of container -->
+  </main>
+  <!-- End of main -->
+
+  <script src="JS/script.js"></script>
+</body>
+
 </html>
