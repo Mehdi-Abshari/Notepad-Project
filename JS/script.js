@@ -127,6 +127,15 @@ function createUINote(noteValue) {
   // Set class for div
   div.classList.add("noteBox");
 
+  // Create <img> tag
+  const img = document.createElement("img");
+  // Set attribute for <img> tag
+  img.setAttribute("src", "../Images/icons8-note-48.png");
+  // Set class for <img> tag
+  img.classList.add("image");
+  // Appending img to div
+  div.appendChild(img);
+
   // Create <h2> tag to save note title into them
   const h2 = document.createElement("h2");
   // Adding h2 to div
