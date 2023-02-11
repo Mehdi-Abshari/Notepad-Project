@@ -140,6 +140,9 @@ function createUINote(noteValue) {
   const div = document.createElement("div");
   // Set class for div
   div.classList.add("noteBox");
+  // Set style for noteBox
+  div.style.cssText =
+    "background: #dff1ff; display: flex; flex-direction: column; width: max-content; min-width: 200px; max-width: 320px; padding: 20px 20px 25px 20px; margin: 20px; border-radius: 4px; position: relative;";
 
   // Create <img> tag
   const img = document.createElement("img");
@@ -154,11 +157,16 @@ function createUINote(noteValue) {
 
   // Create <h2> tag to save note title into them
   const h2 = document.createElement("h2");
+  // Set style for h2
+  h2.style.cssText =
+    "font-family: Montserrat-Bold, Arabic; font-size: 23px; padding-top: 10px;";
   // Adding h2 to div
   div.appendChild(h2);
 
   // Create <p> tag to save note text into them
   const p = document.createElement("p");
+  // Set style for p
+  p.style.cssText = "font-family: Montserrat-Med, Arabic; font-size: 16px; color: rgb(39, 39, 39); padding-top: 10px;";
   // Adding p to div
   div.appendChild(p);
 
@@ -170,6 +178,9 @@ function createUINote(noteValue) {
   // --Craete remove button img
   // Create <a> tag for remove button
   const removeBtn = document.createElement("a");
+  // Set style for removeBtn
+  removeBtn.style.cssText =
+    "background: rgb(31, 31, 31, 0.8); border-radius: 4px 0 4px 0; padding: 0 3.5px; cursor: pointer; position: absolute; right: 0; bottom: 0;";
 
   // Create <img> for remove button
   const removeImg = document.createElement("img");
