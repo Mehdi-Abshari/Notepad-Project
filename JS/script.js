@@ -1,3 +1,9 @@
+/* 
+    name: Notepad project java script;
+    developer: Mehdi Abshari;
+    production date: 1401-09-23;
+    description: ... ;
+*/
 // --Varibales
 // Form select
 const form = document.querySelector("#form");
@@ -50,9 +56,11 @@ function newNote(e) {
   addToLs(noteData);
 }
 
-// Remove button function
+// Function for remove button function
 function removeNote(e) {
+  // If user click at remove button
   if (e.target.classList.contains("removeBtn")) {
+    // remove parent element
     e.target.parentElement.remove();
 
     // Select value in localstorage
@@ -60,7 +68,7 @@ function removeNote(e) {
   }
 }
 
-// Remove note value from localstorage function
+// Function for remove note value from localstorage function
 function removeFromLS(noteText) {
   // remove note text and title from localstorage without remove button
   let cleanNoteText = noteText.substring(0, noteText.length - 1);
@@ -110,17 +118,23 @@ function addToLs(noteText) {
   }
 }
 
+// Function for get data from localStorage
 function getLS() {
+  // get data from localStorage
   return JSON.parse(localStorage.getItem("historyNotes"));
 }
 
+// Function for show saved notes from localStorage
 function showSavedNotes() {
+  // Create varibale for old notes
   let oldNotes = getLS();
+  // We call oldNotes to going to createUINote
   oldNotes.forEach((eachNote) => {
     createUINote(eachNote);
   });
 }
-// Create new note layot function
+
+// Function for create new note layot
 function createUINote(noteValue) {
   // Create <div> tag
   const div = document.createElement("div");
@@ -130,9 +144,11 @@ function createUINote(noteValue) {
   // Create <img> tag
   const img = document.createElement("img");
   // Set attribute for <img> tag
-  img.setAttribute("src", "../Images/icons8-note-48.png");
+  img.setAttribute("src", "../Images/post.png");
   // Set class for <img> tag
   img.classList.add("image");
+  // Set style for image
+  img.style.width = "50px";
   // Appending img to div
   div.appendChild(img);
 
@@ -151,12 +167,21 @@ function createUINote(noteValue) {
   // Adding note value text into the p
   p.innerHTML = noteValue.text;
 
-  // --Craete remove button (X)
+  // --Craete remove button img
   // Create <a> tag for remove button
   const removeBtn = document.createElement("a");
 
-  // Set (X) to remove button
-  removeBtn.innerText = "✖";
+  // Create <img> for remove button
+  const removeImg = document.createElement("img");
+  // Set attribute for <img> tag
+  removeImg.setAttribute("src", "../Images/icons8-close.svg");
+  // Set style for removeImg
+  removeImg.style.width = "12px";
+  // Set class for removeImg
+  removeImg.classList.add("removeImg");
+  // Appending removeImg to removeBtn
+  removeBtn.appendChild(removeImg);
+
   // Set class for removeBtn
   removeBtn.classList.add("removeBtn");
 
